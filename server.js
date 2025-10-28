@@ -19,6 +19,9 @@ app.use(cors());
 // Permite que el servidor entienda JSON en las peticiones
 app.use(express.json()); 
 
+// Middleware para parsear bodies urlencoded (formularios)
+app.use(express.urlencoded({ extended: true }));
+
 // 4. Conexión a la Base de Datos MongoDB
 // (Recuerda reemplazar '<password>' y '<dbname>' con tus credenciales reales)
 const dbURI = 'mongodb+srv://mercadosur_user:tTdkBRvo3U0HqUXL@cluster0.jpievxm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
